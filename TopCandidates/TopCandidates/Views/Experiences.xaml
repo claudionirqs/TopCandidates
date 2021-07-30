@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TopCandidates.Views.Experiences"
+             Title="Candidates Experience">
+
+    <StackLayout>
+
+        <StackLayout>
+            <SearchBar x:Name="sbFilter" TextChanged="sbFilter_TextChanged" BackgroundColor="White" Placeholder="Search by Technology" PlaceholderColor="#5e5e5e" FontSize="12"/>
+        </StackLayout>
+        <StackLayout>
+            <SearchBar x:Name="sbFilter2" TextChanged="sbFilter_TextChanged" BackgroundColor="White" Placeholder="Search by Years of Experience" PlaceholderColor="#5e5e5e" FontSize="12"/>
+        </StackLayout>
+        <StackLayout Padding="10">
+            <Label x:Name="lblCounter" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <ScrollView Padding="10">
+            <ListView x:Name="lvExperiences" HasUnevenRows="True" BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!--Linha um, o stacklayout mantem tudo na mesma linha-->
+                                    <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                        <Label Text="{Binding Candidate}" FontAttributes="Bold" TextColor="#000286" HorizontalTextAlignment="Start"></Label>
+                                    </StackLayout>
+
+                                    <!--Linha dois, o stacklayout mantem tudo na mesma linha-->
+                                    <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                        <Label Text="{Binding Technology}" FontSize="12" TextColor="#5e5e5e" ></Label>
+                                    </StackLayout>
+                                    
+                                    <!--Linha dois, o stacklayout mantem tudo na mesma linha-->
+                                    <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                        <Label Text="{Binding yearsOfExperience}" FontSize="12" TextColor="#5e5e5e" ></Label>
+                                    </StackLayout>
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

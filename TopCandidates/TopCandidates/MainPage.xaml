@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:swipeCardView="clr-namespace:MLToolkit.Forms.SwipeCardView;assembly=MLToolkit.Forms.SwipeCardView"
+             mc:Ignorable="d"
+             x:Class="TopCandidates.MainPage"
+             Title="Main Menu">
+
+    <!--<NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Main Menu" HorizontalOptions="Start" TextColor="White" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>-->
+
+    <ScrollView>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Grid.Column="0" Grid.Row="0" Source="icon.png" Clicked="OpenCandidates_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
+            <Button Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Show All Candidates" Clicked="OpenCandidates_Clicked"/>
+
+            <ImageButton Grid.Column="0" Grid.Row="1" Source="icon.png" Clicked="OpenTechnologies_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
+            <Button Grid.Column="1" Grid.Row="1" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Show Technologies" Clicked="OpenTechnologies_Clicked"/>
+
+            <ImageButton Grid.Column="0" Grid.Row="2" Source="icon.png" Clicked="OpenAccepted_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
+            <Button Grid.Column="1" Grid.Row="2" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Show Accepted Candidates" Clicked="OpenAccepted_Clicked"/>
+
+            <ImageButton Grid.Column="0" Grid.Row="3" Source="icon.png" Clicked="OpenExperiences_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
+            <Button Grid.Column="1" Grid.Row="3" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Search Candidate by Experience" Clicked="OpenExperiences_Clicked"/>
+
+            <!--<ImageButton Grid.Column="0" Grid.Row="3" Source="icon.png" Clicked="OpenTechnologies_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
+            <Button Grid.Column="1" Grid.Row="3" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Show Technologies" Clicked="OpenTechnologies_Clicked"/>
+            -->
+
+        </Grid>
+
+    </ScrollView>
+
+    
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TopCandidates.Views.Welcome">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Welcome" HorizontalOptions="Center" TextColor="White" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout Padding="30">
+            <Label Text="Welcome to TopCandidate!"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Title" />
+        <StackLayout Padding="0,30,0,0" BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Center">
+            <Label Text="Basically, what you need to do is like, dislike or favorite a candidate, swiping the screen to right, left or up respectively. You can do the same by clicking on correspondent icons on the bottom."
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large" />
+            <Button BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" HorizontalOptions="Center" Text="Start using the app" Clicked="StartPAge_Clicked"></Button>
+
+        </StackLayout>
+    </StackLayout>
+        
+
+</ContentPage>
