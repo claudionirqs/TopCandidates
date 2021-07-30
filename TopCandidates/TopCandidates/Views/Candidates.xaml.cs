@@ -63,14 +63,25 @@ namespace TopCandidates.Views
         private void OnLikeClicked(object sender, EventArgs e)
         {
             SwipeCardView.InvokeSwipe((MLToolkit.Forms.SwipeCardView.Core.SwipeCardDirection)MLToolkit.Forms.SwipeCardView.Core.SwipeCardDirection.Right);
-            DisplayAlert("Success", "You accepted the candidate. Page will be developed later", "OK");
         }
 
-        public ICommand SwipedCommand { get; }
-
-        private void OnSwipedCommand(SwipedCardEventArgs eventArgs)
+        private void OnSwiped(object sender, SwipedCardEventArgs e)
         {
+            switch (e.Direction)
+            {
+                case SwipeCardDirection.None:
+                    break;
+                case SwipeCardDirection.Right:
+                    DisplayAlert("Success", "You accepted the candidate. Page will be developed later", "OK");
+                    break;
+                case SwipeCardDirection.Left:
+                    DisplayAlert("Success", "You rejected the candidate. Page will be developed later", "OK");
+                    break;
+                case SwipeCardDirection.Up:
+                    break;
+                case SwipeCardDirection.Down:
+                    break;
+            }
         }
-
     }
 }
