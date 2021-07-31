@@ -71,14 +71,14 @@ namespace TopCandidates.Views
             {
                 case SwipeCardDirection.None:
                     break;
-                case SwipeCardDirection.Right:
+                case SwipeCardDirection.Right: 
                     var item = (Candidate)e.Item;
                     var email = item.email;
-                    string updateQuery = $"UPDATE tabcandidates SET status = 1 WHERE email = '{email}'";
+                    
+                    string updateQuery = "UPDATE tabcandidates SET status = 1 WHERE email = '"+ email +"'";
                     GlobalVar.dataBase.Execute(updateQuery);
                     break;
                 case SwipeCardDirection.Left:
-                    DisplayAlert("Success", "You rejected the candidate. Page will be developed later", "OK");
                     break;
                 case SwipeCardDirection.Up:
                     break;

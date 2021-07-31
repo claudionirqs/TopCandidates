@@ -20,7 +20,7 @@ namespace TopCandidates.Views
 
         public void loadCandidates()
         {
-            List<Candidate> listCandidate = GlobalVar.dataBase.Query<Candidate>("select fullName, IFNULL(profilePicture, 'question.png') profilePicture, email from tabcandidates WHERE status = 0");
+            List<Candidate> listCandidate = GlobalVar.dataBase.Query<Candidate>("select * from tabcandidates WHERE status = 1");
             lvCandidates.ItemsSource = listCandidate;
 
         }
