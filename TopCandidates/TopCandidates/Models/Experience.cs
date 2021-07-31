@@ -11,6 +11,7 @@ namespace TopCandidates.Models
     {
         public string candidateId {get; set; }
         public string Candidate { get; set; }
+        public string profilePicture { get; set; }
         public string technologyId { get; set; }
         public string Technology { get; set; }
         public int yearsOfExperience { get; set; }

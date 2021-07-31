@@ -11,7 +11,6 @@ namespace TopCandidates.Models
         [PrimaryKey, Column("guid")]
         public string guid { get; set; }
         public string name { get; set; }
-        [Ignore]
         public string img {
             get
             {

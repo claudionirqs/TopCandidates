@@ -40,10 +40,6 @@
             <ImageButton Grid.Column="0" Grid.Row="3" Source="icon.png" Clicked="OpenExperiences_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
             <Button Grid.Column="1" Grid.Row="3" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Search Candidate by Experience" Clicked="OpenExperiences_Clicked"/>
 
-            <!--<ImageButton Grid.Column="0" Grid.Row="3" Source="icon.png" Clicked="OpenTechnologies_Clicked" HeightRequest="40" BackgroundColor="White"></ImageButton>
-            <Button Grid.Column="1" Grid.Row="3" BackgroundColor="Transparent" HorizontalOptions="Start" Text="Show Technologies" Clicked="OpenTechnologies_Clicked"/>
-            -->
-
         </Grid>
 
     </ScrollView>

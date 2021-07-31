@@ -86,6 +86,7 @@ namespace TopCandidates
                         foreach (Experience exp in candits.experience)
                         {
                             exp.candidateId = candits.candidateId;
+                            exp.profilePicture = candits.profilePicture;
                             exp.Candidate = candits.fullName;
                             experiences.Add(exp);
                            
@@ -113,14 +114,10 @@ namespace TopCandidates
 
                 //Recuperando os dados da API e deserializando
                 var tecnologie = JsonConvert.DeserializeObject<List<Technologie>>(response);
-
-                var experience = JsonConvert.DeserializeObject<List<Experience>>(response);
-
+                
                 //Insere os dados retornados da API
                 GlobalVar.dataBase.DeleteAll<Technologie>();
                 GlobalVar.dataBase.InsertAll(tecnologie);
-                                
-
             }
             catch (HttpRequestException ex)
             {

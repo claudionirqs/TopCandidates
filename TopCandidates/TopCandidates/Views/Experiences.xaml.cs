@@ -26,9 +26,8 @@ namespace TopCandidates.Views
             var q = GlobalVar.dataBase.Query<Experience>(@"select e.Candidate, t.name Technology, e.yearsOfExperience
             from tabexperiences e
             inner join tabtechnologies t on t.guid = e.technologyId
-            where t.name like '%" + name + "%' and e.yearsOfExperience like '%" + year + "%' ORDER BY Candidate");
+            where t.name like '%" + name + "%' and e.yearsOfExperience like '%" + year + "%' ORDER BY Candidate, e.yearsOfExperience DESC");
             lvExperiences.ItemsSource = q;
-            lblCounter.Text = "Showing " + q.Count.ToString() + " Candidates";
         }
 
         public void loadExperiences()
@@ -36,7 +35,7 @@ namespace TopCandidates.Views
             var q = GlobalVar.dataBase.Query<Experience>(@"select e.Candidate, t.name Technology, e.yearsOfExperience
             from tabexperiences e 
             inner join tabtechnologies t on t.guid = e.technologyId
-			order by e.Candidate"
+			order by e.Candidate, e.yearsOfExperience DESC"
         ).ToList();
             
             lvExperiences.ItemsSource = q;
