@@ -15,7 +15,7 @@
 
 
     <StackLayout BackgroundColor="White">
-
+                
         <swipeCardView:SwipeCardView 
             x:Name="SwipeCardView"
             ItemsSource="{Binding Candidates}" Swiped="OnSwiped"

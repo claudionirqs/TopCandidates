@@ -5,6 +5,9 @@
              Title="Accepted Candidates">
 
     <StackLayout>
+        <StackLayout>
+            <SearchBar x:Name="sbFilter" TextChanged="sbFilter_TextChanged" BackgroundColor="White" Placeholder="Search accepted by name or e-mail" PlaceholderColor="#5e5e5e" FontSize="12"/>
+        </StackLayout>
         <ListView x:Name="lvCandidates" HasUnevenRows="True" BackgroundColor="White">
             <ListView.ItemTemplate>
                 <DataTemplate>

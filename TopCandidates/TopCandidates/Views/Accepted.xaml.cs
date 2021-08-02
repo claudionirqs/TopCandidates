@@ -24,5 +24,13 @@ namespace TopCandidates.Views
             lvCandidates.ItemsSource = listCandidate;
 
         }
+
+        private void sbFilter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Filtro do listview, o parâmetro vem do SearchBox e pode ser o número ou nome da propriedade ou o nome da supervisora
+            var name = sbFilter.Text;
+            List<Candidate> selectItems = GlobalVar.dataBase.Query<Candidate>("SELECT * FROM tabcandidates WHERE status = 1 AND (fullName LIKE '%" + name + "%' OR email LIKE '%" + name + "%')");
+            lvCandidates.ItemsSource = selectItems;
+        }
     }
 }
